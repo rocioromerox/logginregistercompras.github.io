@@ -1,30 +1,53 @@
 <template>
     
       <div class="row row-loggin">
-
-          <div class="col-sm-8 sm-8"> <!--Recuadro del lado izquierdo con imagen-->
-            <div><img class="col-sm-8-img-1" align="left" src="../assets/Grupo 18222@2x2.png"></div>
+          <!--Recuadro del lado izquierdo con imagen-->
+          <div class="col-sm-8 sm-8"> 
+            <div><img class="col-sm-8-img-1" align="left" src="../assets/Grupo 17590.png"></div>
             <div><h2 class="col-sm-8-tittle">¡Explota todo tu potencial <br> tecnológico!</h2></div>
             <div><p class="col-sm-8-text">Con nuestros programas <br> de especialización</p></div>
             <div class="col-sm-8-img-2"><img src="../assets/Grupo 17720.png"></div>
           </div>
 
-
-          <div class="col-sm-4 sm-4"> <!--Recuadro del lado derecho-->
+          <!--Recuadro del lado derecho-->
+          <div class="col-sm-4 sm-4"> 
             
             <div>
 
                 <div class="col-sm-4-header">
-                  <div class="col-sm-4-header-text">Iniciar sesión</div>
-                  <div class="col-sm-4-header-text">Registrarse</div>
+                  <button class="col-sm-4-header-text-session">Iniciar sesión</button>
+                  <button class="col-sm-4-header-text-register">Registrarse</button>
                 </div>
 
                  <div class="col-sm-4-body">
                   <div><input class="col-sm-4-body-input-1" type="text" placeholder="Nombres y apellidos"></div>
                   <div><input class="col-sm-4-body-input-2" type="email" placeholder="Correo electrónico" ></div>
-                  <div><input class="col-sm-4-body-input-3" type="password" placeholder="Contraseña" ></div>
-                  <div><input class="col-sm-4-body-input-4" type="password" placeholder="Repite contraseña"></div>
-                  <label><input class="checkbox-terms" type="checkbox" value="first_checkbox"> Acepto <span class="checkbox-terms-span">los términos y condiciones</span></label>
+                  <div><input class="col-sm-4-body-input-3 input-password" type="password" placeholder="Contraseña" ></div>
+                  <div><input class="col-sm-4-body-input-4 input-password" type="password" placeholder="Repite contraseña"></div>
+                  
+                  <!--Términos y condiciones con modal-->
+                  <label><input class="checkbox-terms" type="checkbox" value="first_checkbox"> 
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Acepto <span class="checkbox-terms-span">los términos y condiciones</span></button> </label>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Términos y condiciones</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="modal-body-text" align="left" >Los términos y condiciones de uso describen todos los términos y condiciones de carácter general que resultan aplicables al uso de aquellos contenidos o servicios disponibles bajo el dominio y subdominios de www.idat.edu.pe.
+                            Cuando el usuario accede a esta página web o cuando consulta la información que se encuentra contenida en ella, reconoce no solo que ha leído, sino que también ha entendido y aceptado, los términos y condiciones generales que se desarrollan a continuación.
+                            En caso de no aceptarlos, se le solicita que no haga uso, ni acceda, ni manipule la información de los servicios ofrecidos por el sitio web, ya que en condición de usuario estaría haciendo un uso inadecuado de éste.
+                            Todos los derechos de propiedad intelectual de la página web son de propiedad de Idat.</p>
+                        </div>
+                      </div>
+              </div>
+
+        </div>
+
                   <div><button class="btn-loggin-2" type="submit">Registrarser</button></div>
                   
                 </div>
@@ -33,8 +56,6 @@
              
           </div>
           
-
-
       </div>
     
     
@@ -115,14 +136,16 @@ export default {
   
 }
 
-.col-sm-4-header-text {
+.col-sm-4-header-text-session, .col-sm-4-header-text-register {
   margin: 15px;
   font-size: 14px;
   font-weight: bold;
   color: #222222;
   cursor: pointer;
-
+  border: none;
+  background: white;
 }
+
 
 .col-sm-4-body {
   width: 100%;
@@ -186,12 +209,36 @@ export default {
   margin: 40px 0px 0px 0px;
 }
 
+.input-password {
+  background-image: url('../assets/eye.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  cursor: pointer;
+}
+
+/*Estilos del modal*/ 
+.btn-primary {
+  border: none;
+  color: #222222;
+  background-color: white;
+}
+
+.btn-primary:hover{  
+       border: none;
+       color: white; 
+       background-color: #5640FF;
+       margin: 0;
+}
+
+
+
 /*Versión celular*/
 
 @media screen and (max-width: 600px) {
 .sm-8 {
 display:none;
 }
+
 }
 
 
