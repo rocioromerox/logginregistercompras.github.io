@@ -232,7 +232,14 @@ export default {
 
 /*Versión celular*/
 
-
+@media screen and (max-width: 600px) {
+    .row-1 {
+    background-color: #F8F8FA;
+    width: 100vw;
+    height: 500px;
+    }
+    
+}
 
 
 </style>

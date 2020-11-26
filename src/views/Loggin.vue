@@ -35,39 +35,29 @@
 
 <script>
 // @ is an alias to /src
-
-
-
 </script>
 
 
 <style>
-
 * { box-sizing: border-box;
 }
-
 .row-loggin {
   width: 100vw;
   height: 660px;
 }
-
 .sm-8, .sm-4 {
   padding: 0;
   height: 660px;
 }
-
 /*Estilo del recuadro del lado izquierdo con imagen*/
-
 .sm-8{
   width: 100%;
   background-image: url("../assets/Grupo 17721.png"); width: 50%px; height: 50%px;
 }
-
 .col-sm-8-img-1 {
   margin: 20px 0px 0px 80px;
   text-align: left;
 }
-
 .col-sm-8-tittle {
   text-align: right;
   color: #FFFFFF;
@@ -75,21 +65,17 @@
   font-size: 26px;
   font-weight: bold;
 }
-
 .col-sm-8-text {
   font-size: 16px;
   color: #FFFFFF;
   margin: 20px 80px 0px 0px;
   text-align: right;
 }
-
 .col-sm-8-img-2 {
   margin: 150px 0px 20px 80px;
   text-align: left;
 }
-
 /*Estilo del recuadro del lado derecho*/
-
 .col-sm-4-header {
   width: 100%;
   height: 60px;
@@ -98,7 +84,6 @@
   border: 1px solid gray;
   background-color: white;
 }
-
 .col-sm-4-header-text-session, .col-sm-4-header-text-register {
   margin: 15px;
   font-size: 14px;
@@ -108,27 +93,21 @@
   border: none;
   background: white;
 }
-
-
-
 .col-sm-4-body {
   width: 100%;
   height: 600px;
   background-color: white;
   border: 1px solid gray;
 }
-
 .col-sm-4-body-input-1,.col-sm-4-body-input-2 {
   width: 350px;
   height: 50px;
   border: 1px solid #8B9099;
   border-radius: 5px;
 }
-
 .col-sm-4-body-input-1 {
   margin: 150px 0px 10px 0px;
 }
-
 .col-sm-4-body-firsttext{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 10px;
@@ -136,7 +115,6 @@
   text-align: right;
   margin: 5px 65px 0px 0px
 }
-
 .btn-loggin {
   width: 350px;
   height: 50px;
@@ -148,7 +126,6 @@
   font-weight: bold;
   margin: 150px 0px 0px 0px;
 }
-
 .col-sm-4-body-secondtext {
   font-size: 12px;
   font-weight: bold;
@@ -158,17 +135,13 @@
   margin: 10px 0px 0px 0px;
   cursor: pointer;
 }
-
 .input-password {
   background-image: url('../assets/eye.png');
   background-repeat: no-repeat;
   background-position: right;
   cursor: pointer;
 }
-
-
 /*Versión celular*/
-
 @media screen and (max-width: 600px) {
     .sm-8 {
     display:none;
@@ -177,6 +150,5 @@
     margin: 5px 75px 0px 0px
     }
 }
-
 </style>
 
