@@ -63,21 +63,22 @@
 <!--Lado derecho del contenedor-->
 
     <div class="col-sm-4" id="col-4">
-      <div class="compras-total" >
-          <div>Subtotal</div>
-          <div>S/ 600</div>
-      </div>
+        <div class="col-sm-4-contain">
+            <div class="compras-total" >
+                <div>Subtotal</div>
+                <div>S/ 600</div>
+            </div>
 
-      <div>
-          <input class= "compras-input" type="text" placeholder="Agrega un código de descuento">
-          <button class="compras-btn">Continuar</button>
- </div>
+            <div>
+                <input class= "compras-input" type="text" placeholder="Agrega un código de descuento">
+                <button class="compras-btn">Continuar</button>
+            </div>
  
-</div>
+        </div>
+
+    </div>
 
 </div>
-
-
   
          
 </template>
@@ -94,7 +95,7 @@ export default {
 
 .row-1 {
     background-color: #F8F8FA;
-    width: 100%;
+    width: 100vw;
     height: 660px;
 }
 
@@ -204,7 +205,7 @@ export default {
     font-size: 20px;
     font-weight: bold;
     color: #5640FF;
-    margin: 150px 20px 80px 20px;
+    
 }
 
 .compras-input{
@@ -215,6 +216,7 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /*roboto*/
   font-size: 12px;
   padding: 0px 0px 0px 15px;
+  margin: 50px;
 }
 
 .compras-btn{
@@ -227,7 +229,15 @@ export default {
   /*Falta el font family */
   font-size: 14px;
   font-weight: bold;
-  margin: 50px 0px 0px 0px;
+  margin: 20px;
+}
+
+.col-sm-4-contain {
+    border: none;
+    background-color: white;
+    width: 433px;
+    height: 283px;
+    margin: 200px 20px 80px 20px;
 }
 
 /*Versión celular*/
