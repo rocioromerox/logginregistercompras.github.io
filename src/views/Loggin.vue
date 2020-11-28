@@ -19,11 +19,13 @@
                 </div>
 
                 <div class="col-sm-4-body">
+                  <div class="div-body"> <!--div nuevo-->
                   <div><input class="col-sm-4-body-input-1" type="email" placeholder="Correo electrónico"></div>
                   <div><input class="col-sm-4-body-input-2 input-password" type="password" placeholder="Contraseña"></div>
-                  <div class="col-sm-4-body-firsttext"><p>Ingresa un correo válido</p></div>
+                  <div class="col-sm-4-body-firsttext"><p class="firstext-class">Ingresa un correo válido</p></div>
                   <div><button class="btn-loggin" type="submit">Ingresar</button></div>
                   <div class="col-sm-4-body-secondtext"><p>¿Olvidaste tu contraseña?</p></div>
+                  </div> <!--div nuevo-->
                 </div>
 
             </div>
@@ -39,16 +41,21 @@
 
 
 <style scoped>
+
 * { box-sizing: border-box;
 }
+
 .row-loggin {
   width: 100vw;
   height: 660px;
 }
 .sm-8, .sm-4 {
   padding: 0;
+  margin: auto;
   height: 660px;
 }
+
+
 /*Estilo del recuadro del lado izquierdo con imagen*/
 .sm-8{
   width: 100%;
@@ -75,7 +82,11 @@
   margin: 150px 0px 20px 80px;
   text-align: left;
 }
-/*Estilo del recuadro del lado derecho*/
+
+
+
+/*Estilos div lado derecho*/
+
 .col-sm-4-header {
   width: 100%;
   height: 60px;
@@ -84,6 +95,7 @@
   border: 1px solid gray;
   background-color: white;
 }
+
 .col-sm-4-header-text-session, .col-sm-4-header-text-register {
   margin: 15px;
   font-size: 14px;
@@ -93,28 +105,49 @@
   border: none;
   background: white;
 }
-.col-sm-4-body {
-  width: 100%;
-  height: 600px;
-  background-color: white;
-  border: 1px solid gray;
+
+
+.div-body {
+  margin: 0px 20px 0px 20px;
+  text-align: center;
 }
+
 .col-sm-4-body-input-1,.col-sm-4-body-input-2 {
   width: 350px;
   height: 50px;
   border: 1px solid #8B9099;
   border-radius: 5px;
+  text-align: left;
+  position: relative;
 }
+
 .col-sm-4-body-input-1 {
-  margin: 150px 0px 10px 0px;
+  margin: 200px 0px 5px 0px;
 }
+
+.input-password {
+  background-image: url('../assets/eye.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  cursor: pointer;
+}
+
 .col-sm-4-body-firsttext{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 10px;
   color: #F22A40;
+  margin: 0px 0px 0px 0px;
+  width: 350px;
+  height: 50px;
+  padding: 0px;
   text-align: right;
-  margin: 5px 65px 0px 0px
 }
+
+.firstext-class{
+  padding: 0px;
+  margin: 0px 0px 50px 0px;
+}
+
 .btn-loggin {
   width: 350px;
   height: 50px;
@@ -126,6 +159,7 @@
   font-weight: bold;
   margin: 150px 0px 0px 0px;
 }
+
 .col-sm-4-body-secondtext {
   font-size: 12px;
   font-weight: bold;
@@ -135,12 +169,18 @@
   margin: 10px 0px 0px 0px;
   cursor: pointer;
 }
-.input-password {
-  background-image: url('../assets/eye.png');
-  background-repeat: no-repeat;
-  background-position: right;
-  cursor: pointer;
+
+.col-sm-4-body {
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  border: 1px solid gray;
 }
+
+
+
+
+
 /*Versión celular*/
 @media screen and (max-width: 600px) {
     .sm-8 {
@@ -149,6 +189,7 @@
     .col-sm-4-body-firsttext {
     margin: 5px 75px 0px 0px
     }
+    
 }
 </style>
 
