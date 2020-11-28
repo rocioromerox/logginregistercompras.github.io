@@ -21,10 +21,11 @@ export default new Vuex.Store({
   },
   actions: {
     crearUsuarioAction({commit}, usuario){
-      auth.createUserWithEmailAndPassword(usuario.email, usuario.password)
+      auth.createUserWithEmailAndPassword(usuario.name, usuario.email, usuario.password)
       .then ( res => {
         //console.log(res)
         const usuario = {
+          name: res.user.name,
           email: res.user.email,
           uid: res.user.uid
         }

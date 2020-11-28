@@ -22,7 +22,7 @@
                 <form @sumbit.prevent='crearUsuarioAction({email:email, password:pass1})'>
                     
                 <div class="col-sm-4-body">
-                  <div><input class="col-sm-4-body-input-1" type="text" placeholder="Nombres y apellidos" required></div>
+                  <div><input class="col-sm-4-body-input-1" type="text" placeholder="Nombres y apellidos" required v-model="name"></div>
                   <div><input class="col-sm-4-body-input-2" type="email" placeholder="Correo electrónico" v-model="email" required></div>
                   <div><input class="col-sm-4-body-input-3 input-password" type="password" placeholder="Contraseña" v-model="pass1" required></div>
                   <div><input class="col-sm-4-body-input-4 input-password" type="password" placeholder="Repite contraseña" v-model="pass2" required></div>
@@ -63,7 +63,7 @@
 </template>
 
 
-<script>
+<script scoped>
 import {mapActions, mapState} from 'vuex'
 
 export default {
@@ -71,9 +71,12 @@ export default {
 
   data(){
     return {
+      
+      name: '',
       email: '',
       pass1: '',
       pass2: ''
+      
     }
   },
 
