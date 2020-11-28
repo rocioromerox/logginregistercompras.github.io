@@ -1,6 +1,5 @@
 <template>
-    
-      <div class="row row-loggin">
+  <div class="row row-loggin">
           <!--Recuadro del lado izquierdo con imagen-->
           <div class="col-sm-8 sm-8"> 
             <div><img class="col-sm-8-img-1" align="left" src="../assets/Grupo 17590.png"></div>
@@ -19,15 +18,18 @@
                   <button class="col-sm-4-header-text-register">Registrarse</button>
                 </div>
 
-                 <div class="col-sm-4-body">
-                  <div><input class="col-sm-4-body-input-1" type="text" placeholder="Nombres y apellidos"></div>
-                  <div><input class="col-sm-4-body-input-2" type="email" placeholder="Correo electrónico" ></div>
-                  <div><input class="col-sm-4-body-input-3 input-password" type="password" placeholder="Contraseña" ></div>
-                  <div><input class="col-sm-4-body-input-4 input-password" type="password" placeholder="Repite contraseña"></div>
+                <!--FORMULARIO-->
+                <form @sumbit.prevent='crearUsuarioAction({email:email, password:pass1})'>
+                    
+                <div class="col-sm-4-body">
+                  <div><input class="col-sm-4-body-input-1" type="text" placeholder="Nombres y apellidos" required></div>
+                  <div><input class="col-sm-4-body-input-2" type="email" placeholder="Correo electrónico" v-model="email" required></div>
+                  <div><input class="col-sm-4-body-input-3 input-password" type="password" placeholder="Contraseña" v-model="pass1" required></div>
+                  <div><input class="col-sm-4-body-input-4 input-password" type="password" placeholder="Repite contraseña" v-model="pass2" required></div>
+                  
                   
                   <!--Términos y condiciones con modal-->
-                  <label><input class="checkbox-terms" type="checkbox" value="first_checkbox"> 
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Acepto <span class="checkbox-terms-span">los términos y condiciones</span></button> </label>
+                  <label><input class="checkbox-terms" type="checkbox" value="first_checkbox" required><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Acepto <span class="checkbox-terms-span">los términos y condiciones</span></button></label>
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -44,35 +46,44 @@
                             Todos los derechos de propiedad intelectual de la página web son de propiedad de Idat.</p>
                         </div>
                       </div>
-              </div>
-
-        </div>
-
-                  <div><button class="btn-loggin-2" type="submit">Registrarser</button></div>
-                  
-                </div>
-
+                    </div>
+                  </div>
+                  <div><button class="btn-loggin-2" type="submit">Registrarse</button></div>
+                </div> 
+                
+                </form>
+                 
+                 <div><p>{{error}}</p></div> 
+                                
             </div>
-             
+
           </div>
-          
-      </div>
-    
-    
-
-
-
+             
+  </div>
 </template>
 
+
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import {mapActions, mapState} from 'vuex'
 
 export default {
-  name: 'Loggin',
-  components: {
-    HelloWorld
-  }
+  name: 'Register',
+
+  data(){
+    return {
+      email: '',
+      pass1: '',
+      pass2: ''
+    }
+  },
+
+  methods: {
+      ...mapActions(['crearUsuarioAction'])
+  },
+
+  computed: {
+      ...mapState(['error'])
+  },
 }
 </script>
 

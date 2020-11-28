@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    
-    <router-view/>
+    <div>
+    <router-link to="/">Home</router-link> |
+      <router-link to="/register">Register</router-link> |
+      <router-link to="/loggin">Loggin</router-link> |
+      <router-link to="/miscompras">Mis compras</router-link>
     </div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
